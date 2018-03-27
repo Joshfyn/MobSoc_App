@@ -19,9 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Exercise_Option" />
-        <activity android:name=".WalkActivity" />
-        <activity android:name=".RunActivity"></activity>
+        <activity android:name=".Exercise_Option"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".WalkActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".RunActivity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
