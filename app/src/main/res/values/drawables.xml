@@ -3,4 +3,5 @@
     <item name="ic_settings" type="drawable">@android:drawable/ic_settings</item>-->
     <item name="ic_menu_help" type="drawable">@android:drawable/ic_menu_help</item>
     <item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item>
+
 </resources>
