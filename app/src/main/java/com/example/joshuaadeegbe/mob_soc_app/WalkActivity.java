@@ -12,8 +12,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class WalkActivity extends AppCompatActivity implements SensorEventListener {
+public class WalkActivity extends AppCompatActivity implements SensorEventListener, StepListener {
     private SensorManager sensorManager;
+    private StepDetector simpleStepDetector;
+    private Sensor accel;
+    private static final String TEXT_NUM_STEPS = "Steps = ";
+    private int numSteps;
 
     private TextView countStep;
     public TextView mTvTime;
@@ -23,8 +27,6 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
     private Context mContect;
     private Chronometer mChronometer;
     private Thread mThreadChrono;
-
-    Boolean StepisRunning;
 
 
 
@@ -41,12 +43,21 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
         mbtnEnd = (Button) findViewById(R.id.mbtnEnd);
 
         countStep = (TextView) findViewById(R.id.step_counter);
-        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
+        // Get an instance of the SensorManager
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        accel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        simpleStepDetector = new StepDetector();
+        simpleStepDetector.registerListener(this);
+
 
         mbtnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 chrometer_strt();
+                numSteps = 0;
+                sensorManager.registerListener(WalkActivity.this, accel, SensorManager.SENSOR_DELAY_FASTEST);
+
             }
         });
 
@@ -54,6 +65,7 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View v) {
                 chrometer_stp();
+                sensorManager.unregisterListener(WalkActivity.this);
             }
         });
 	
@@ -90,28 +102,22 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        StepisRunning = true;
-        Sensor countSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
-        if (countSensor != null){
-            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_UI);
-        }
-        else {
-            Toast.makeText(this, "counter sensor not available!", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    @Override
     public void onSensorChanged(SensorEvent event) {
-        countStep.setText(String.valueOf(event.values[0]));
-
-
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            simpleStepDetector.updateAccel(
+                    event.timestamp, event.values[0], event.values[1], event.values[2]);
+        }
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
+
+    @Override
+    public void step(long timeNs) {
+        numSteps++;
+        countStep.setText(TEXT_NUM_STEPS + numSteps);
 
     }
 }
