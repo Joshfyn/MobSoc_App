@@ -1,8 +1,39 @@
 <resources>
-    <string name="app_name">mob_soc_App</string>
+    <string name="app_name">FitNess App</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    
+    <string-array name="Fitness_Suggestions">
+        <item>Run</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+    </string-array>
+
+    <!-- Pictures -->
+    <array name="Profile_pics">
+        <item>@drawable/ic_action_run</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+    </array>
+
+    <string-array name="Description">
+        <item>Run</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+        <item>losprem</item>
+    </string-array>
 </resources>

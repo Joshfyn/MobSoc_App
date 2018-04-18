@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class WalkActivity extends AppCompatActivity implements SensorEventListener, StepListener {
+public class    WalkActivity extends AppCompatActivity implements SensorEventListener, StepListener {
     private SensorManager sensorManager;
     private StepDetector simpleStepDetector;
     private Sensor accel;
