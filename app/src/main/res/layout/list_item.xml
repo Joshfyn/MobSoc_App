@@ -19,7 +19,7 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/profile_pic"
         android:paddingBottom="10dp"
-        android:text="x"
+        android:text="txt"
         android:textSize="20sp"/>
 
     <TextView
@@ -28,9 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/fitness_suggestion"
         android:layout_below="@+id/fitness_suggestion"
-        android:text="z"
+        android:text="txt"
         android:textSize="16sp"/>
-
 
 </RelativeLayout>
 
