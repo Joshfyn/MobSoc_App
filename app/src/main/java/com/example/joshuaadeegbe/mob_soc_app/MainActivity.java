@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity
 
 
     public FloatingActionButton fab;
+    public DrawerLayout settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 OpenExercise_Option();
+
+            }
+        });
+
+        settings = (DrawerLayout) findViewById(R.id.drawer_layout)
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OpenSettings_Option();
 
             }
         });
@@ -94,6 +104,10 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void OpenSettings_Option(){
+        Intent intent = new Intent (this, )
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -110,6 +124,9 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+        if (id == R.id.action_settings){
+        }
 
         /*if (id == R.id.nav_camera) {
             // Handle the camera action
