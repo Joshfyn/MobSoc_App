@@ -10,68 +10,109 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="241dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="241dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
         android:text="Sign Up / Log In"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="25dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="306dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="306dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="61dp"
         android:text="Step Goal"
         android:textSize="14sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="111dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginEnd="301dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="301dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
         android:text="Sensitivity"
         android:textSize="14sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="169dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
+        android:layout_marginEnd="284dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="284dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="66dp"
         android:text="GPS Settings"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="274dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="16dp"
+        android:layout_marginEnd="267dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="267dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="43dp"
         android:text="Advance Charts"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="337dp" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="327dp"
-        android:layout_height="36dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="High sensitiviy means small movement will be counted as steps"
-        android:textSize="11sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="188dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="95dp"
+        android:layout_marginEnd="324dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="324dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="45dp"
         android:text="Report"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="397dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginStart="16dp"
+        android:text="High sensitivity means small movement will be counted as steps"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
 </android.support.constraint.ConstraintLayout>

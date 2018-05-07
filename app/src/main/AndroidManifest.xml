@@ -28,6 +28,8 @@
             android:theme="@style/AppTheme"></activity>
         <activity android:name=".RunActivity"
             android:theme="@style/AppTheme"></activity>
+        <activity android:name=".Settings2Activity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

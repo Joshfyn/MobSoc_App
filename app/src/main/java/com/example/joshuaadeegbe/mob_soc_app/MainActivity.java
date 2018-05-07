@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity
 
 
     public FloatingActionButton fab;
-    public DrawerLayout settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,14 +61,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        settings = (DrawerLayout) findViewById(R.id.drawer_layout)
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OpenSettings_Option();
 
-            }
-        });
 
         rowItems = new ArrayList<RowItem>();
 
@@ -99,14 +91,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void OpenExercise_Option() {
-        Intent intent = new Intent(this, Exercise_Option.class);
-        startActivity(intent);
-    }
 
-    public void OpenSettings_Option(){
-        Intent intent = new Intent (this, )
-    }
 
     @Override
     public void onBackPressed() {
@@ -118,33 +103,33 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.action_settings){
+        if (id == R.id.nav_settings){
+            OpenSettings_Option();
         }
 
-        /*if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void OpenExercise_Option() {
+        Intent intent = new Intent(this, Exercise_Option.class);
+        startActivity(intent);
+    }
+
+    public void OpenSettings_Option(){
+        Intent intent = new Intent (this, Settings2Activity.class);
+        startActivity(intent);
     }
 }
 
