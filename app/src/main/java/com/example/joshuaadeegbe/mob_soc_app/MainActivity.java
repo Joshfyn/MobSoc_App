@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
                                     int position, long id) {
                 String item = rowItems.get(position).getFitness_name();
                 Toast.makeText(getApplicationContext(),
-                        "Click ListItem Number " + position + ": " + item, Toast.LENGTH_LONG)
+                        "Click ListItem Number " + position + ": " + item, Toast.LENGTH_SHORT)
                         .show();
             }
         });
