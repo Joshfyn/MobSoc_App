@@ -1,42 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.joshuaadeegbe.mob_soc_app.Exercise_Option">
+    android:padding="10dp"
+    tools:context="com.example.joshuaadeegbe.mob_soc_app.Exercise_Option"
+    android:gravity="center">
 
-    <ImageView
-        android:id="@+id/walk_action"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginLeft="115dp"
-        android:layout_marginRight="115dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_action_walk" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/run_action"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="114dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginLeft="107dp"
-        android:layout_marginRight="115dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/walk_action"
-        app:layout_constraintVertical_bias="0.568"
-        app:srcCompat="@drawable/ic_action_run" />
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="190dp"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_material_light"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/walk_action"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/circlebackgroundlight"
+                android:padding="10dp"
+                android:src="@drawable/ic_directions_walk_black_24dp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="190dp"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_material_light"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/run_action"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/cicrcularbackground"
+                android:padding="10dp"
+                android:src="@drawable/ic_directions_run_black_24dp" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
+</RelativeLayout>
+

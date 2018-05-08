@@ -24,12 +24,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    String [] fitness_name;
+    /*String [] fitness_name;
     TypedArray picture_id;
     String [] description_br;
 
     List<RowItem> rowItems;
-    ListView listView;
+    ListView listView;*/
 
 
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        rowItems = new ArrayList<RowItem>();
+        /*rowItems = new ArrayList<RowItem>();
 
         fitness_name = getResources().getStringArray(R.array.Fitness_Suggestions);
         picture_id = getResources().obtainTypedArray(R.array.Profile_pics);
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
                         "Click ListItem Number " + position + ": " + item, Toast.LENGTH_SHORT)
                         .show();
             }
-        });
+        });*/
 
     }
 
